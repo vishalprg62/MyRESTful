@@ -1,0 +1,43 @@
+package com.intense.demowithoracle.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.intense.demowithoracle.model.Customer;
+import com.intense.demowithoracle.repository.CustomerRepository;
+import com.intense.demowithoracle.response.MyResponse;
+import com.intense.demowithoracle.service.CustomerService;
+
+@RestController
+public class HomeController {
+
+	@Autowired
+	private CustomerRepository cRepository;
+	
+	@GetMapping("/customers")
+	public ResponseEntity<MyResponse> getCustomers()
+	{
+		return new ResponseEntity<MyResponse>(new MyResponse("all customers info",cRepository.findAll()),HttpStatus.OK);
+	}
+	
+	@GetMapping("/customer/{id}")
+	public ResponseEntity<MyResponse> getCustomer(@PathVariable int id)
+	{
+		return new ResponseEntity<MyResponse>(new MyResponse("data of customer with "+id, cRepository.findById(id)),HttpStatus.OK);
+	}
+	
+	
+	@PostMapping("/customer")
+	public ResponseEntity<MyResponse> save(@RequestBody Customer customer) 
+	{
+		return new ResponseEntity<MyResponse>(new MyResponse("data of customer with "+customer.getCustomerId()+" saved", cRepository.save(customer)),HttpStatus.OK);
+	}
+	
+	
+}

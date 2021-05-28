@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\practice\RESTful\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4099746815.index
+3319803322.index
+2053624676.index
+818101126.index
+4168274286.index
+2243717966.index

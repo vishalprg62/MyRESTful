@@ -1,0 +1,5 @@
+INSERT INTO customers(customer_name , city )  VALUES  ('Rahul', 'Gujrat' ); 
+INSERT INTO customers(customer_name , city )  VALUES  ('Prince', 'Lohardaga' );   
+INSERT INTO customers(customer_name , city )  VALUES  ('Chulli', 'Hydrabad' );   
+INSERT INTO customers(customer_name , city )  VALUES  ('Ujjwal', 'Mumbai' );   
+INSERT INTO customers(customer_name , city )  VALUES  ('Dev', 'Banaras' );     

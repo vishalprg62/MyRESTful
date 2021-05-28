@@ -1,0 +1,5 @@
+package com.intense.demowithoracle.repository;
+
+public class CustomerRepository {
+
+}

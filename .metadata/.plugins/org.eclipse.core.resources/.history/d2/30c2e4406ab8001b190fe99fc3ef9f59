@@ -1,0 +1,5 @@
+package com.intense.demoDeployNew.model;
+
+public class MyMsg {
+
+}

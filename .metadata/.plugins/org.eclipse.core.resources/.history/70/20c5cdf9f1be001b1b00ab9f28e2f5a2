@@ -1,0 +1,5 @@
+package com.intense.demowithoracle.response;
+
+public class MyResponse {
+
+}

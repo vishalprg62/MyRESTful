@@ -1,0 +1,5 @@
+package com.intense.demowithoracle.model;
+
+public class Customer {
+
+}
